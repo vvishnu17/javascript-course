@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  padding: 10px;
+}
+#result {
+  background-color: white;
+  width: 21%;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.container {
+  display: grid;
+  grid-template-columns: 60px 60px 60px 60px;
+  column-gap: 10px;
+  margin-bottom: 10px;
+}
+button {
+  color: white;
+  background-color: rgb(32, 31, 31);
+  border: none;
+  font-weight: bold;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
