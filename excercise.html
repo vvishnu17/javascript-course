@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects Excercise</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "basketball",
+        price: 2095,
+      };
+      product.price += 500;
+      product["delivery-time"] = "3 days";
+      console.log(product);
+      const product1 = {
+        name: "ball",
+        price: 300,
+      };
+      const product2 = {
+        name: "toy",
+        price: 300,
+      };
+      function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+          return product1;
+        } else {
+          return product2;
+        }
+      }
+      const lessExpensiveProduct = comparePrice(product1, product2);
+      console.log(lessExpensiveProduct);
+      function isSameProduct(product1, product2) {
+        if (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isSameProduct(product1, product2));
+      const str1 = "GOOD MORNING! ";
+      console.log(str1.toLowerCase());
+      console.log(str1.repeat(3));
+    </script>
+  </body>
+</html>

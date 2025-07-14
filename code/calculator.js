@@ -1,13 +1,27 @@
-let calculation = "";
+let calculation;
+function setResult(resultCalculation) {
+  document.getElementById("result").innerHTML = resultCalculation;
+}
+function setLocalStorage(calculation) {
+  localStorage.setItem("calculation", calculation);
+}
+if (localStorage.getItem("calculation")) {
+  calculation = localStorage.getItem("calculation");
+  setResult(calculation);
+} else {
+  calculation = "";
+}
 function calculate(numberOrOperator) {
   calculation += numberOrOperator;
-  document.getElementById("result").innerHTML = calculation;
+  setResult(calculation);
+  setLocalStorage(calculation);
 }
 function calculateResult() {
   calculation = eval(calculation);
-  document.getElementById("result").innerHTML = calculation;
+  setResult(calculation);
+  setLocalStorage(calculation);
 }
 function resetCalculator() {
   calculation = "";
-  document.getElementById("result").innerHTML = calculation;
+  setResult(calculation);
 }
